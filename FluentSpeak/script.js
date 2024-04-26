@@ -57,11 +57,14 @@ recordButton.addEventListener('click', () => {
             mediaRecorder.addEventListener('dataavailable', event => {
                 audioChunks.push(event.data);
             });
+
+            // 開始錄音後禁用 "開始錄音" 按鈕
+            recordButton.disabled = true;
         });
 });
 stopRecordButton.addEventListener('click', () => {
     mediaRecorder.stop(); // 停止錄音
-    stopTimer(); // 停止計時
+    stopTimer(); // 停止計時    
     mediaRecorder.addEventListener('stop', () => {
         const audioBlob = new Blob(audioChunks); // 將錄音資料轉換為 Blob 物件
         const audioUrl = URL.createObjectURL(audioBlob); // 將 Blob 物件轉換為 URL
@@ -72,5 +75,8 @@ stopRecordButton.addEventListener('click', () => {
         // 在網頁上顯示 "錄音檔已經建構"
         const messageElement = document.getElementById('message');
         messageElement.textContent = "錄音檔已經建構";
+
+        // 停止錄音後啟用 "開始錄音" 按鈕
+        recordButton.disabled = false;
     });
 });
