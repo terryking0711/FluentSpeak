@@ -1,9 +1,4 @@
-const topics = [
-    "Describe your favorite book and why you like it.",
-    "Talk about a memorable event in your life.",
-    "Discuss the impact of technology on education."
-];
-
+import topics from './topics.js';
 const topicButton = document.getElementById('topicButton');
 const topicDisplay = document.getElementById('topicDisplay');
 topicButton.addEventListener('click', () => {

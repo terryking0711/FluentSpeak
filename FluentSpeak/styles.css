@@ -10,8 +10,8 @@ body, html {
 .container {
     position: relative;
     width: 90%;
-    max-width: 800px;
-    margin: 100px auto; /* 增加上下間距讓版面不會太壓迫 */
+    max-width: 900px;
+    margin: 90px auto; /* 增加上下間距讓版面不會太壓迫 */
     text-align: center;
     padding: 30px; /* 增加內距使內容不會太擁擠 */
     box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* 增強陰影效果讓容器更有層次感 */
