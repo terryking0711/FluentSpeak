@@ -1,0 +1,98 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6; /* 增加行高以提升可讀性 */
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    margin: 100px auto; /* 增加上下間距讓版面不會太壓迫 */
+    text-align: center;
+    padding: 30px; /* 增加內距使內容不會太擁擠 */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* 增強陰影效果讓容器更有層次感 */
+    background: white;
+    border-radius: 12px; /* 圓角設計增加現代感 */
+}
+
+h1 {
+    position: absolute; /* 讓 h1 可以被定位 */
+    top: 0; /* 將 h1 定位在 .container 的上方 */
+    left: 15; /* 將 h1 定位在 .container 的左方 */
+    color: #4a54f1;
+    margin-bottom: 10px; /* 增加標題與內容之間的間距 */
+}
+
+h2 {
+    color: #4a54f1;
+    margin-bottom: 10px; /* 增加標題與內容之間的間距 */
+}
+
+button {
+    background-color: #4a54f1;
+    color: white;
+    border: none;
+    border-radius: 30px; /* 增加圓角使按鈕更現代 */
+    padding: 12px 24px; /* 增加按鈕的大小使其更容易點擊 */
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25); /* 增加按鈕的陰影效果 */
+    transition: all 0.3s ease-in-out; /* 平滑的過渡效果 */
+}
+
+button:hover {
+    background-color: #3a44c1;
+    transform: scale(1.2); /* 滑鼠懸浮時輕微放大 */
+}
+
+#topicDisplay {
+    font-size: 22px; /* 增加字號提升顯著性 */
+    font-weight: bold;
+}
+#topicButton, #topicDisplay {
+    margin-top: 40px; /* 將元素往下移動 20px，你可以將 '20px' 換成你想要的距離 */
+}
+
+#timer {
+    font-size: 28px; /* 增加字號提升顯著性 */
+    font-weight: bold;
+    color: #e84118; 
+}
+
+#message {
+    margin-top: 20px; /* 將元素往下移動 20px，你可以將 '20px' 換成你想要的距離 */
+    margin-bottom: 20px; /* 將元素往上移動 20px，你可以將 '20px' 換成你想要的距離 */
+    font-size: 20px;
+    color: #4a54f1;
+    font-weight: bold; /* 將文字變粗 */
+}
+
+audio {
+    width: 70%; /* 調整寬度以更好適應不同的屏幕 */
+}
+h2 {
+    margin-bottom: 15.5px; /* 將 h2 元素往上移動 5px，你可以將 '5px' 換成你想要的距離 */
+}
+#button-container {
+    display: flex; /* 讓 h2 和 #timer 排列在同一行 */
+    align-items: center; /* 讓 h2 和 #timer 垂直居中 */
+    justify-content: center; /* 讓 h2 和 #timer 水平居中 */
+    margin-bottom: 10px; /* 將元素往上移動 20px，你可以將 '20px' 換成你想要的距離 */
+}
+#button-container > * {
+    margin: 0 10px; /* 在每個元素的左右側添加 10px 的間距 */
+}
+#timer-message {
+    margin-top: 20px; /* 將元素往下移動 20px，你可以將 '20px' 換成你想要的距離 */
+    margin-bottom: 20px; /* 將元素往上移動 20px，你可以將 '20px' 換成你想要的距離 */
+    color: #4a54f1; /* 將文字顏色設定為紅色，你可以將 'red' 換成你想要的顏色 */
+    font-size: 20px; /* 將文字大小設定為 20px，你可以將 '20px' 換成你想要的大小 */
+    font-weight: bold; /* 將文字變粗 */
+}
+#recordButton, #stopRecordButton {
+    margin: 0 5px; /* 在每個按鈕的左右側添加 10px 的間距 */
+}
