@@ -5,8 +5,22 @@ topicButton.addEventListener('click', () => {
     const randomIndex = Math.floor(Math.random() * topics.length);
     topicDisplay.textContent = topics[randomIndex];
 });
-
-let timer;
+window.onload = function() {
+    let visitorCountElement = document.getElementById('visitorCount');
+    let visitorCount = localStorage.getItem('visitorCount');
+    if (visitorCount === null) {
+        visitorCount = 0;
+    } else {
+        visitorCount = parseInt(visitorCount);
+    }
+    if (sessionStorage.getItem('hasVisited') === null) {
+        visitorCount += 1;
+        localStorage.setItem('visitorCount', visitorCount);
+        sessionStorage.setItem('hasVisited', 'true');
+    }
+    visitorCountElement.innerText = '訪問人數: ' + visitorCount;
+}
+    let timer;
 let seconds = 0;
 const timerDisplay = document.getElementById('timer');
 
@@ -71,12 +85,12 @@ stopRecordButton.addEventListener('click', () => {
         const audioUrl = URL.createObjectURL(audioBlob); // 將 Blob 物件轉換為 URL
         audioPlayback.src = audioUrl; // 將 URL 設定為音訊播放的來源
 
-        // 建立一個下載連結
-        const downloadLink = document.createElement('a');
-        downloadLink.href = audioUrl;
-        downloadLink.download = 'recording.mp3';
-        downloadLink.textContent = '下載錄音檔';
-        document.body.appendChild(downloadLink);
+        // // 建立一個下載連結
+        // const downloadLink = document.createElement('a');
+        // downloadLink.href = audioUrl;
+        // downloadLink.download = 'recording.mp3';
+        // downloadLink.textContent = '下載錄音檔';
+        // document.body.appendChild(downloadLink);
 
         // 隱藏 "計時中" 的文字
         const timerMessageElement = document.getElementById('timer-message');
