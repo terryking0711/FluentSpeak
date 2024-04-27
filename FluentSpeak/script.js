@@ -66,9 +66,17 @@ stopRecordButton.addEventListener('click', () => {
     mediaRecorder.stop(); // 停止錄音
     stopTimer(); // 停止計時    
     mediaRecorder.addEventListener('stop', () => {
-        const audioBlob = new Blob(audioChunks); // 將錄音資料轉換為 Blob 物件
+        const audioBlob = new Blob(audioChunks, { type: 'audio/mpeg' }); // 將錄音資料轉換為 Blob 物件
         const audioUrl = URL.createObjectURL(audioBlob); // 將 Blob 物件轉換為 URL
         audioPlayback.src = audioUrl; // 將 URL 設定為音訊播放的來源
+
+        // 建立一個下載連結
+        const downloadLink = document.createElement('a');
+        downloadLink.href = audioUrl;
+        downloadLink.download = 'recording.mp3';
+        downloadLink.textContent = '下載錄音檔';
+        document.body.appendChild(downloadLink);
+
         // 隱藏 "計時中" 的文字
         const timerMessageElement = document.getElementById('timer-message');
         timerMessageElement.textContent = '';
