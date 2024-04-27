@@ -96,3 +96,12 @@ h2 {
 #recordButton, #stopRecordButton {
     margin: 0 5px; /* 在每個按鈕的左右側添加 10px 的間距 */
 }
+
+#visitorCount {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    font-size: 18x;
+    color: #4a54f1;
+    font-weight: bold;
+}
