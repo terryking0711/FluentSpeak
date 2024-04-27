@@ -6,4 +6,3 @@ self.onmessage = function(e) {
     const mp3Data = mp3encoder.encodeBuffer(audioData); // 將 pcm 資料轉換為 mp3
     self.postMessage(mp3Data);
 };
-
