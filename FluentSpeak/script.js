@@ -62,6 +62,7 @@ recordButton.addEventListener('click', () => {
             recordButton.disabled = true;
         });
 });
+
 stopRecordButton.addEventListener('click', () => {
     mediaRecorder.stop(); // 停止錄音
     stopTimer(); // 停止計時    
