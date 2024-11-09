@@ -18,7 +18,7 @@ window.onload = function() {
         localStorage.setItem('visitorCount', visitorCount);
         sessionStorage.setItem('hasVisited', 'true');
     }
-    visitorCountElement.innerText = '訪問人數: ' + visitorCount;
+    visitorCountElement.innerText = '訪問次數(個人): ' + visitorCount;
 }
     let timer;
 let seconds = 0;
